@@ -2,9 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
-
 body {
   background: #f2f2f2;
   color: #444;
@@ -41,8 +38,9 @@ header h1 {
   max-width: 640px;
   margin: 20px auto;
 }
+
 .task {
-  padding: 6px 20px;
+  padding: 10px 25px;
   background: #fff;
   margin-top: 20px;
   border-radius: 4px;
@@ -53,9 +51,14 @@ header h1 {
 }
 .task h3, .task .icons {
   display: inline-block;
+  font-family: poppins;
+ 
 }
 .task .icons {
   text-align: right;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
 }
 .task i {
   font-size: 1.4em;
@@ -116,4 +119,41 @@ form input {
   border-radius: 6px;
   color: #555;
   font-size: 1em;
+}
+.active{
+    color: rgb(147, 6, 6);
+}
+
+
+/* provide button */
+
+.provide{
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+
+}
+.pbtn{
+    color: white;
+    background-color: #5413b5;
+    font-size: 20px;
+    padding: 8px 22px;
+    border-radius: 7px;
+}
+
+/* provide box 1 */
+
+.box1{
+    background-color:#5413b5;
+    padding: 2em 13em;
+    font-weight: bold;
+    border-radius: 13px;
+    align-items: center;
+    align-items: center;
+    margin: 5em 25em;
+}
+.box1 h2{
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }

@@ -32,14 +32,20 @@
         <TaskDetails :task="task" />
       </div>
     </div>
+
+    <!-- for provide button -->
+    <div class="provide">
+      <nuxt-link class='pbtn' to='/provide'>Provide</nuxt-link>
+    </div>
   </main>
 </template>
 
 <script setup>
   import { useTaskStore } from '~/store/TaskStore'
-  import { ref } from 'vue'
+  import { ref, provide } from 'vue'
   const taskStore = useTaskStore()
 
   const filter = ref('all')
 
+  provide('favs', taskStore.favs);
 </script>
