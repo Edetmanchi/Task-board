@@ -5,7 +5,7 @@
     <!-- heading -->
     <header>
       <img src="/task.png" alt="task icon">
-      <h1>Pinia Tasks</h1>
+      <h1>My Tasks Board</h1>
     </header>
 
     <!-- new task form -->
@@ -32,18 +32,14 @@
         <TaskDetails :task="task" />
       </div>
     </div>
-
   </main>
 </template>
 
 <script setup>
-
-  import { useTaskStore } from './store/TaskStore'
+  import { useTaskStore } from '~/store/TaskStore'
   import { ref } from 'vue'
+  const taskStore = useTaskStore()
 
-
-      const taskStore = useTaskStore()
-      const filter = ref('all')
-
+  const filter = ref('all')
 
 </script>
