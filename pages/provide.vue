@@ -1,22 +1,21 @@
-
-
 <template>
   <div>
     <!-- Button to toggle the filteredFav component -->
+
     <div class="box1">
       <button @click="showFilteredFav = !showFilteredFav">
         {{ showFilteredFav ? 'Hide Favorited Tasks' : 'Show Favorited Tasks' }}
+        <FilteredFavs  v-if="showFilteredFav"/>
       </button>
     </div>
 
-    <!-- Display the filteredFav component conditionally -->
-    <FilteredFavs v-if="showFilteredFav" />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 
-// Local state to control the visibility of the filteredFav component
-const showFilteredFav = ref(false);
+  import { ref } from 'vue';
+  const showFilteredFav = ref(false);
+  const message = inject('favs')
+
 </script>

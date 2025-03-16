@@ -26,6 +26,7 @@
         <TaskDetails :task="task" />
       </div>
     </div>
+    
     <div class="task-list" v-if="filter === 'favs'">
       <p>You have {{ taskStore.favCount }} tasks in your favs list.</p>
       <div v-for="task in taskStore.favs" :key="task.id">
@@ -35,17 +36,18 @@
 
     <!-- for provide button -->
     <div class="provide">
-      <nuxt-link class='pbtn' to='/provide'>Provide</nuxt-link>
+      <nuxt-link class='pbtn' to='/stock'>Provide</nuxt-link>
     </div>
   </main>
 </template>
 
 <script setup>
-  import { useTaskStore } from '~/store/TaskStore'
-  import { ref, provide } from 'vue'
+  import { useTaskStore } from '~/store/TaskStore';
+  import { ref, provide } from 'vue';
   const taskStore = useTaskStore()
 
   const filter = ref('all')
+  provide('favs', taskStore.favs);  
+  console.log(taskStore.task)
 
-  provide('favs', taskStore.favs);
 </script>

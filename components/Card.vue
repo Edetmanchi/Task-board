@@ -15,7 +15,7 @@
   
   <script setup>
 import PrimaryButton from './PrimaryButton.vue';
-import SecondaryButton from './SecondaryButton.vue';
+import SecondaryButton from './StockData.vue';
 
 
   
