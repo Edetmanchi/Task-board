@@ -1,6 +1,6 @@
 <template>
     <div>
-        <StckData/>
+        <StockData/>
     </div>
     
 </template>
